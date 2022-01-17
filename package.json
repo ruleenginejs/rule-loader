@@ -1,0 +1,40 @@
+{
+  "name": "@ruleenginejs/rule-loader",
+  "version": "1.0.0",
+  "description": "Rule loader for webpack",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "postversion": "npm run push",
+    "push": "git push origin master --tags"
+  },
+  "dependencies": {
+    "@ruleenginejs/compiler": "^1.0.2",
+    "@ruleenginejs/schema": "^1.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.9",
+    "eslint": "^8.7.0",
+    "eslint-plugin-node": "^11.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruleenginejs/rule-loader.git"
+  },
+  "keywords": [
+    "ruleengine",
+    "webpack",
+    "rule-loader"
+  ],
+  "author": "Nikolay Naumenkov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ruleenginejs/rule-loader/issues"
+  },
+  "homepage": "https://github.com/ruleenginejs/rule-loader#readme",
+  "engines": {
+    "node": ">=8.10.0"
+  }
+}

@@ -5,7 +5,7 @@
 ## Installation
 
 ```bash
-npm install @ruleenginejs/rule-loader
+npm install -D @ruleenginejs/rule-loader
 ```
 
 ## Usage

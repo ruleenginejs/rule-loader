@@ -1,6 +1,6 @@
 {
   "name": "@ruleenginejs/rule-loader",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Rule loader for webpack",
   "main": "index.js",
   "files": [

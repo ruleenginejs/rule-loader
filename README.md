@@ -8,6 +8,12 @@
 npm install -D @ruleenginejs/rule-loader
 ```
 
+### Add Runtime
+
+```bash
+npm install @ruleenginejs/runtime
+```
+
 ## Usage
 
 ### Config

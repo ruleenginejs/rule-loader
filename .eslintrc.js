@@ -1,11 +1,17 @@
 module.exports = {
   root: true,
+  plugins: [
+    "jest"
+  ],
   extends: [
     "eslint:recommended",
-    "plugin:node/recommended"
+    "plugin:node/recommended",
+    "plugin:jest/recommended"
   ],
   env: {
-    node: true
+    es6: true,
+    node: true,
+    "jest/globals": true
   },
   rules: {
     eqeqeq: [

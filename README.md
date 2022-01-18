@@ -30,9 +30,9 @@ module.exports = {
 #### App.js
 
 ```js
-import pipeline from "./my.rule";
+import bar from "./bar.rule";
 
-pipeline.execute();
+bar.execute();
 ```
 
 ## License

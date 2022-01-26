@@ -1,8 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`bad schema rule 1`] = `"Error: Schema invalid: [{\\"instancePath\\":\\"\\",\\"schemaPath\\":\\"#/required\\",\\"keyword\\":\\"required\\",\\"params\\":{\\"missingProperty\\":\\"steps\\"},\\"message\\":\\"must have required property 'steps'\\"}]"`;
-
-exports[`compile simple rule 1`] = `
+exports[`rule-loader should output compiled rule module 1`] = `
 "const {
   SingleStep,
   CompositeStep,
@@ -43,3 +41,5 @@ singleStep_2.connectTo(endStep_3, \\"default\\", \\"default\\");
 pipeline.add(startStep_1, singleStep_2, endStep_3);
 module.exports = pipeline;"
 `;
+
+exports[`rule-loader should throw error when invalid rule schema 1`] = `"Error: Schema invalid: [{\\"instancePath\\":\\"\\",\\"schemaPath\\":\\"#/required\\",\\"keyword\\":\\"required\\",\\"params\\":{\\"missingProperty\\":\\"steps\\"},\\"message\\":\\"must have required property 'steps'\\"}]"`;

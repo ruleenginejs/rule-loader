@@ -36,10 +36,19 @@ module.exports = {
 #### App.js
 
 ```js
-import bar from "./bar.rule";
+import rule from "./bar.rule";
 
-bar.execute();
+rule.execute();
 ```
+
+## Options
+
+|                Name                 |        Type         |                   Default                    | Description                                                |
+| :---------------------------------: | :-----------------: | :------------------------------------------: | :--------------------------------------------------------- |
+|      **`checkSchema`**              |    `{Boolean}`      |                    `true`                    | Enables/disables the validation scheme for the rule files  |
+|      **`runtimeModule`**            |    `{String}`       |         `'@ruleenginejs/runtime'`            | Runtime module name                                        |
+|     **`moduleBaseDir`**             |    `{String}`       |                  `undefined`                 | Base path for import modules in rule files                 |
+|     **`esModule`**                  |    `{Boolean}`      |                    `true`                    | Enable/disable ES modules syntax                           |
 
 ## License
 

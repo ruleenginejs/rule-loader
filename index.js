@@ -2,7 +2,7 @@ const schema = require('@ruleenginejs/schema');
 const { generateCode } = require('@ruleenginejs/compiler');
 const { validate } = require('schema-utils');
 const schemaValidator = schema(schema.SCHEMAS.PIPELINE);
-const runtimeModule = '@ruleenginejs/runtime';
+const defaultRuntimeModule = '@ruleenginejs/runtime';
 
 const optionsSchema = {
   type: 'object',
@@ -12,6 +12,12 @@ const optionsSchema = {
     },
     runtimeModule: {
       type: 'string',
+    },
+    moduleBaseDir: {
+      type: 'string',
+    },
+    esModule: {
+      type: 'boolean'
     }
   },
   additionalProperties: false
@@ -37,7 +43,9 @@ module.exports = function loader(source) {
   }
 
   const code = generateCode(data, {
-    runtimeModule: options.runtimeModule || runtimeModule
+    runtimeModule: options.runtimeModule || defaultRuntimeModule,
+    esModule: options.esModule === undefined || options.esModule,
+    baseDir: options.moduleBaseDir
   });
 
   return code;

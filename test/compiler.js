@@ -4,11 +4,12 @@ const { createFsFromVolume, Volume } = require('memfs');
 
 module.exports = (fixture, options = {}) => {
   const compiler = webpack({
+    mode: 'development',
     context: __dirname,
     entry: `./fixtures/${fixture}`,
     output: {
       path: path.resolve(__dirname),
-      filename: 'bundle.js',
+      filename: 'bundle.js'
     },
     externals: {
       '@ruleenginejs/runtime': 'RuleengineJsRuntime'

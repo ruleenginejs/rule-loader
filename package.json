@@ -3,8 +3,10 @@
   "version": "1.0.3",
   "description": "Rule loader for webpack",
   "main": "index.js",
+  "types": "index.d.ts",
   "files": [
-    "index.js"
+    "index.js",
+    "index.d.ts"
   ],
   "scripts": {
     "test": "jest",
@@ -15,19 +17,19 @@
     "webpack": "^5.0.0"
   },
   "dependencies": {
-    "@ruleenginejs/compiler": "^1.0.2",
-    "@ruleenginejs/schema": "^1.0.2",
+    "@ruleenginejs/compiler": "^1.0.3",
+    "@ruleenginejs/schema": "^1.0.3",
     "schema-utils": "^4.0.0"
   },
   "devDependencies": {
     "@types/jest": "^27.4.0",
-    "@types/node": "^17.0.9",
+    "@types/node": "^17.0.13",
     "eslint": "^8.7.0",
-    "eslint-plugin-jest": "^25.7.0",
+    "eslint-plugin-jest": "^26.0.0",
     "eslint-plugin-node": "^11.1.0",
     "jest": "^27.4.7",
     "memfs": "^3.4.1",
-    "webpack": "^5.66.0"
+    "webpack": "^5.67.0"
   },
   "repository": {
     "type": "git",

@@ -1,8 +1,16 @@
 const compiler = require('./compiler.js');
 
 describe('rule-loader', () => {
-  it('should output compiled rule module', async () => {
+  it('should output compiled rule module with es module', async () => {
     const stats = await compiler('simple.rule');
+    const output = stats.toJson({ source: true }).modules[0].source;
+    expect(output).toMatchSnapshot();
+  });
+
+  it('should output compiled rule module with commonjs module', async () => {
+    const stats = await compiler('simple.rule', {
+      esModule: false
+    });
     const output = stats.toJson({ source: true }).modules[0].source;
     expect(output).toMatchSnapshot();
   });

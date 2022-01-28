@@ -2,12 +2,10 @@
 
 exports[`rule-loader should output compiled rule module with commonjs module 1`] = `
 "const {
-  SingleStep,
-  CompositeStep,
+  Pipeline,
   StartStep,
-  EndStep,
-  ErrorStep,
-  Pipeline
+  SingleStep,
+  EndStep
 } = require(\\"@ruleenginejs/runtime\\");
 
 const pipeline = new Pipeline();
@@ -43,8 +41,8 @@ module.exports = pipeline;"
 `;
 
 exports[`rule-loader should output compiled rule module with es module 1`] = `
-"import handler_3 from \\"./new-step.js\\";
-import { SingleStep, CompositeStep, StartStep, EndStep, ErrorStep, Pipeline } from \\"@ruleenginejs/runtime\\";
+"import { Pipeline, StartStep, SingleStep, EndStep } from \\"@ruleenginejs/runtime\\";
+import handler_3 from \\"./new-step.js\\";
 const pipeline = new Pipeline();
 const startStep_1 = new StartStep({
   id: 2,

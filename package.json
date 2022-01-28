@@ -17,8 +17,8 @@
     "webpack": "^5.0.0"
   },
   "dependencies": {
-    "@ruleenginejs/compiler": "^1.0.3",
-    "@ruleenginejs/schema": "^1.0.3",
+    "@ruleenginejs/compiler": "^1.0.4",
+    "@ruleenginejs/schema": "^1.0.4",
     "schema-utils": "^4.0.0"
   },
   "devDependencies": {

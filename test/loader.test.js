@@ -21,7 +21,7 @@ describe('rule-loader', () => {
     try {
       await compiler('bad-schema.rule');
     } catch (e) {
-      message = e[0].message.split("\n")[1];
+      message = e[0].message.split('\n')[1];
     }
     expect(message).toMatchSnapshot();
   });

@@ -8,13 +8,13 @@ const optionsSchema = {
   type: 'object',
   properties: {
     checkSchema: {
-      type: 'boolean',
+      type: 'boolean'
     },
     runtimeModule: {
-      type: 'string',
+      type: 'string'
     },
     moduleBaseDir: {
-      type: 'string',
+      type: 'string'
     },
     esModule: {
       type: 'boolean'
@@ -28,7 +28,7 @@ module.exports = function loader(source) {
 
   validate(optionsSchema, options, {
     name: 'Rule Loader',
-    baseDataPath: 'options',
+    baseDataPath: 'options'
   });
 
   const data = JSON.parse(source);

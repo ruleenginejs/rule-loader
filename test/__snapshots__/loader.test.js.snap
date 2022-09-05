@@ -6,73 +6,73 @@ exports[`rule-loader should output compiled rule module with commonjs module 1`]
   StartStep,
   SingleStep,
   EndStep
-} = require(\\"@ruleenginejs/runtime\\");
+} = require("@ruleenginejs/runtime");
 
 const pipeline = new Pipeline();
 const startStep_1 = new StartStep({
   id: 2,
-  name: \\"Start\\",
+  name: "Start",
   ports: {
-    in: [\\"default\\"],
-    out: [\\"default\\"]
+    in: ["default"],
+    out: ["default"]
   }
 });
 const singleStep_2 = new SingleStep({
   id: 5,
-  name: \\"New Step\\",
-  handler: require(\\"./new-step.js\\"),
+  name: "New Step",
+  handler: require("./new-step.js"),
   ports: {
-    in: [\\"default\\"],
-    out: [\\"default\\"]
+    in: ["default"],
+    out: ["default"]
   }
 });
 const endStep_3 = new EndStep({
   id: 8,
-  name: \\"End\\",
+  name: "End",
   ports: {
-    in: [\\"default\\"],
-    out: [\\"default\\"]
+    in: ["default"],
+    out: ["default"]
   }
 });
-startStep_1.connectTo(singleStep_2, \\"default\\", \\"default\\");
-singleStep_2.connectTo(endStep_3, \\"default\\", \\"default\\");
+startStep_1.connectTo(singleStep_2, "default", "default");
+singleStep_2.connectTo(endStep_3, "default", "default");
 pipeline.add(startStep_1, singleStep_2, endStep_3);
 module.exports = pipeline;"
 `;
 
 exports[`rule-loader should output compiled rule module with es module 1`] = `
-"import { Pipeline, StartStep, SingleStep, EndStep } from \\"@ruleenginejs/runtime\\";
-import handler_3 from \\"./new-step.js\\";
+"import { Pipeline, StartStep, SingleStep, EndStep } from "@ruleenginejs/runtime";
+import handler_3 from "./new-step.js";
 const pipeline = new Pipeline();
 const startStep_1 = new StartStep({
   id: 2,
-  name: \\"Start\\",
+  name: "Start",
   ports: {
-    in: [\\"default\\"],
-    out: [\\"default\\"]
+    in: ["default"],
+    out: ["default"]
   }
 });
 const singleStep_2 = new SingleStep({
   id: 5,
-  name: \\"New Step\\",
+  name: "New Step",
   handler: handler_3,
   ports: {
-    in: [\\"default\\"],
-    out: [\\"default\\"]
+    in: ["default"],
+    out: ["default"]
   }
 });
 const endStep_4 = new EndStep({
   id: 8,
-  name: \\"End\\",
+  name: "End",
   ports: {
-    in: [\\"default\\"],
-    out: [\\"default\\"]
+    in: ["default"],
+    out: ["default"]
   }
 });
-startStep_1.connectTo(singleStep_2, \\"default\\", \\"default\\");
-singleStep_2.connectTo(endStep_4, \\"default\\", \\"default\\");
+startStep_1.connectTo(singleStep_2, "default", "default");
+singleStep_2.connectTo(endStep_4, "default", "default");
 pipeline.add(startStep_1, singleStep_2, endStep_4);
 export default pipeline;"
 `;
 
-exports[`rule-loader should throw error when invalid rule schema 1`] = `"Error: Schema invalid: [{\\"instancePath\\":\\"\\",\\"schemaPath\\":\\"#/required\\",\\"keyword\\":\\"required\\",\\"params\\":{\\"missingProperty\\":\\"steps\\"},\\"message\\":\\"must have required property 'steps'\\"}]"`;
+exports[`rule-loader should throw error when invalid rule schema 1`] = `"Error: Schema invalid: [{"instancePath":"","schemaPath":"#/required","keyword":"required","params":{"missingProperty":"steps"},"message":"must have required property 'steps'"}]"`;

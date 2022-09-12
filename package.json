@@ -13,15 +13,14 @@
     "format": "prettier --write \"**/*.{js,ts}\"",
     "lint": "eslint \"**/*.js\" --fix",
     "postversion": "npm run push",
-    "push": "git push origin master --tags",
-    "prepare": "husky install"
+    "push": "git push origin master --tags"
   },
   "peerDependencies": {
     "webpack": "^5.0.0"
   },
   "dependencies": {
-    "@ruleenginejs/compiler": "^1.0.5",
-    "@ruleenginejs/schema": "^1.0.5",
+    "@ruleenginejs/compiler": "^1.0.6",
+    "@ruleenginejs/schema": "^1.0.6",
     "schema-utils": "^4.0.0"
   },
   "devDependencies": {
